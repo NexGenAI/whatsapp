@@ -1,8 +1,9 @@
 # NexGenAI Whatsapp Bot
 
-<img src="./public/README.png">
+![README_img](https://user-images.githubusercontent.com/94318094/229103866-6505d709-92cb-473d-bc0d-b1fe24aaf8b3.png)
 
 ## 👋 Introduction
+
 
 Welcome to nexgenai's cutting-edge WhatsApp chatbot - your go-to solution for all your queries! Powered by Large language models, our chatbot offers a range of features, including answering questions, generating images, scheduling tasks, and much more. Developed by our company, nexgenai, this chatbot uses the latest advancements in natural language processing to provide accurate and efficient responses to your queries. 
 
