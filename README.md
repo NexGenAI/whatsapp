@@ -1,6 +1,6 @@
 # NexGenAI Whatsapp Bot
 
-<img src="./public/README3.png">
+<img src="./public/README.png">
 
 ## 👋 Introduction
 
