@@ -5,7 +5,7 @@
 ## 👋 Introduction
 
 
-Welcome to nexgenai's cutting-edge WhatsApp chatbot - your go-to solution for all your queries! Powered by Large language models, our chatbot offers a range of features, including answering questions, generating images, scheduling tasks, and much more. Developed by our company, nexgenai, this chatbot uses the latest advancements in natural language processing to provide accurate and efficient responses to your queries. 
+Welcome to NexGenAI's cutting-edge WhatsApp chatbot - your go-to solution for all your queries! Powered by Large language models, our chatbot offers a range of features, including answering questions, generating images, scheduling tasks, and much more. Developed by our company, nexgenai, this chatbot uses the latest advancements in natural language processing to provide accurate and efficient responses to your queries. 
 
 > With our chatbot, you can easily solve your queries through WhatsApp, without the need to navigate through complex systems or wait for a response from a human agent.
 
