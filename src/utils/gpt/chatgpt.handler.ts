@@ -2,7 +2,6 @@ import { config } from "dotenv";
 config({ path: ".env" });
 import { OpenAIApi } from "openai";
 import { configuration } from "../../config/config.GPT";
-import ChatContext from "../../models/chat.context.model";
 import CustomErrorHandler from "../CustomError.Handler";
 import CronExpressioHandler from "../reminder.handler";
 import { generatePrompt } from "./generate.prompt";

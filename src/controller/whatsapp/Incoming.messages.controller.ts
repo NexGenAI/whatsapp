@@ -1,3 +1,4 @@
+import { Conversation } from "../../models/chat.model";
 import User from "../../models/user.creadentials.models";
 import RouteParamsHandler from "../../types/RouteParams.type";
 import ChatGptHandler from "../../utils/gpt/chatgpt.handler";
@@ -12,7 +13,7 @@ import ChatGptHandler from "../../utils/gpt/chatgpt.handler";
  * @param {function} next - The next function to call in the middleware chain
  * @returns {Promise} - Promise object representing the response
  * @throws {Error} - Error object representing any errors that occurred
-*/
+ */
 const IncomingMessagesController: RouteParamsHandler = async function (
   req,
   res,
@@ -35,20 +36,23 @@ const IncomingMessagesController: RouteParamsHandler = async function (
 
     const ChatGPTResponse = await ChatGptHandler(message, phone);
 
-    if (typeof ChatGPTResponse === "string") {
-      if (
-        ChatGPTResponse.startsWith("SETRE") ||
-        ChatGPTResponse.startsWith("SETNRE")
-      ) {
-        res.status(200).json({
-          response: "Reminder is set",
-        });
-      } else {
-        res.status(200).json({
-          response: ChatGPTResponse,
-        });
-      }
-    }
+    // save database
+    const UserMessage = {
+      text: message,
+      from: "user",
+      timestamps: new Date(),
+    };
+
+    const BotResponse = {
+      text: ChatGPTResponse,
+      timestamps: new Date(),
+    };
+
+    await Conversation.findOneAndUpdate(
+      { "user.phone": phone, },
+      { $push: { chats: UserMessage, responses: BotResponse } },
+      { upsert: true, new: true }
+    );
 
     res.status(200).send(ChatGPTResponse);
   } catch (error) {

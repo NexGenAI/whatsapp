@@ -37,19 +37,7 @@ export const generatePrompt = async function (
   try {
     // prompts
     const PromptAssistantData = await loadPromptData("generalPrompt");
-    const ReminderPromptData = await loadPromptData("reminderPrompt");
-    const greetingPrompt = `Greet user in a conversational manner with politeness.
-    User: Hey
-    Assitant: Hello, how are you?
-
-    User: Hello
-    Assitant: Hey, how can i help you?
-
-    User: kese ho
-    Assistant: mein theek ap kese ho?
-
-    User: hey how are you
-    Assitant:`;
+    // const ReminderPromptData = await loadPromptData("reminderPrompt");
 
     // previous message and response
     const previousMessages = previousMessage.slice(-3).join("\n");
@@ -66,7 +54,8 @@ export const generatePrompt = async function (
     const userData = await getUserData(userPhoneNumber);
     const { username } = userData;
 
-    const CompletePrompt = `${PromptAssistantData} \nCurrentTime=${year}-${month}-${day} ${hour}:${minute}:${second} \n${greetingPrompt} \n\n${ReminderPromptData} checkUserName=${username} \npreviousUserMessage: ${previousMessages} \nPreviousAssistantResponse: ${previousResponses} \nUser: ${prompt} \nAssitant:`;
+    // \n\n${ReminderPromptData}
+    const CompletePrompt = `${PromptAssistantData} \nCurrentTime=${year}-${month}-${day}-${hour}:${minute}:${second} checkUserName=${username} \npreviousUserMessage: ${previousMessages} \nPreviousAssistantResponse: ${previousResponses} \nUser: ${prompt} \nAssitant:`;
     // console.log(CompletePrompt);
     return CompletePrompt;
   } catch (error) {

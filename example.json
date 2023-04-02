@@ -1,0 +1,35 @@
+{
+  "_id": { "$oid": "642918652213c3a06e79b77a" },
+  "user": {
+    "phone": "8271405490",
+    "_id": { "$oid": "642916c4de4291a7d44d13f0" }
+  },
+  "__v": { "$numberInt": "0" },
+  "bot": { "_id": { "$oid": "642916c4de4291a7d44d13f1" } },
+  "chats": [
+    {
+      "text": "Hey",
+      "from": "user",
+      "_id": { "$oid": "642916d8de4291a7d44d13f7" },
+      "timestamp": { "$date": { "$numberLong": "1680414424149" } }
+    },
+    {
+      "text": "I am fine, what about you?",
+      "from": "user",
+      "_id": { "$oid": "6429183ade4291a7d44d13fe" },
+      "timestamp": { "$date": { "$numberLong": "1680414778802" } }
+    }
+  ],
+  "responses": [
+    {
+      "text": "Hello, how are you?",
+      "_id": { "$oid": "642916d8de4291a7d44d13f6" },
+      "timestamp": { "$date": { "$numberLong": "1680414424148" } }
+    },
+    {
+      "text": "I'm doing great, thank you for asking. How can I help you?",
+      "_id": { "$oid": "6429183ade4291a7d44d13fd" },
+      "timestamp": { "$date": { "$numberLong": "1680414778799" } }
+    }
+  ]
+}
